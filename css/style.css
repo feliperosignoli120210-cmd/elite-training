@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
+    --bg-black: #050708;
+    --card-bg: #0d1117;
+    --neon-green: #00ff88;
+    --text-white: #ffffff;
+    --text-gray: #888888;
+    --border: #1f2933;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+body { background-color: var(--bg-black); color: var(--text-white); line-height: 1.6; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Navbar */
+.navbar { display: flex; justify-content: space-between; padding: 20px 5%; align-items: center; background: rgba(10, 14, 18, 0.95); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border); }
+.logo { font-weight: 900; color: var(--neon-green); font-size: 1.2rem; }
+
+/* Botoes */
+.btn-primary { background: var(--neon-green); color: black !important; padding: 15px 35px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: 0.3s; display: inline-block; border: none; cursor: pointer; text-transform: uppercase; font-size: 0.9rem; text-align: center; }
+.btn-primary:hover { box-shadow: 0 0 25px rgba(0, 255, 136, 0.5); transform: translateY(-2px); }
+
+.btn-create-account { background: #ffffff; color: #000000 !important; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: 0.3s; border: 1px solid #ffffff; cursor: pointer; text-align: center; display: inline-flex; align-items: center; justify-content: center; }
+.btn-create-account:hover { background: #e0e0e0; }
+
+.btn-secondary { border: 1px solid white; color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: 0.3s; display: inline-block; }
+
+/* Hero Section */
+.hero { text-align: center; padding: 120px 20px; background: radial-gradient(circle at top, #0a1f16 0%, #050708 80%); }
+.hero h1 { font-size: 4.5rem; font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+.highlight { color: var(--neon-green); }
+.hero p { max-width: 800px; margin: 0 auto 40px; color: var(--text-gray); font-size: 1.2rem; }
+
+/* Estatísticas */
+.stats { display: flex; justify-content: center; gap: 80px; margin-top: 150px; padding-top: 80px; border-top: 1px solid var(--border); }
+.stats strong { font-size: 2.5rem; color: var(--neon-green); display: block; }
+.stats p { font-size: 0.8rem; color: var(--text-gray); letter-spacing: 2px; text-transform: uppercase; }
+
+/* Metodologia */
+.methodology { padding: 100px 20px; text-align: center; }
+.grid-metodologia { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+.card-metodologia { background: var(--card-bg); padding: 50px; border-radius: 20px; border: 1px solid var(--border); text-align: left; }
+.card-metodologia h3 { color: var(--neon-green); margin-bottom: 15px; font-size: 1.4rem; }
+
+/* Formulários */
+.full-center { display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 40px 20px; }
+.form-card { background: var(--card-bg); padding: 60px; border-radius: 25px; border: 1px solid var(--border); width: 100%; max-width: 650px; text-align: center; box-shadow: 0 30px 60px rgba(0,0,0,0.8); }
+.input-group { margin-bottom: 30px; text-align: left; }
+.input-group label { display: block; color: var(--neon-green); font-weight: bold; margin-bottom: 10px; font-size: 0.9rem; }
+input, textarea { width: 100%; padding: 18px; background: #050708; border: 1px solid var(--border); border-radius: 10px; color: white; outline: none; font-size: 1rem; }
+
+.radio-option { display: block; background: #161b22; padding: 25px; margin-bottom: 15px; border-radius: 12px; cursor: pointer; border: 1px solid var(--border); text-align: left; transition: 0.3s; }
+.radio-option:hover { border-color: var(--neon-green); }
+
+/* Tabelas de Treino */
+.treino-page { padding: 80px 0; }
+.dia-bloco { background: var(--card-bg); padding: 40px; border-radius: 20px; margin-bottom: 60px; border-top: 6px solid var(--neon-green); }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; color: var(--text-gray); padding: 20px; border-bottom: 2px solid var(--border); font-size: 0.9rem; text-transform: uppercase; }
+td { padding: 20px; border-bottom: 1px solid #1a1a1a; font-size: 1.1rem; }
