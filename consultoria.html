@@ -3,36 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escolha seu Treino</title>
+    <title>Configuração de Protocolo | Elite Training</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos específicos para esta página para torná-la maior e mais imponente */
+        .step-container { display: none; animation: fadeIn 0.5s ease-in-out; }
+        .step-active { display: block; }
+        
+        .gender-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
+        .gender-card { 
+            background: #161b22; border: 2px solid var(--border); padding: 40px 20px; 
+            border-radius: 20px; cursor: pointer; transition: 0.3s; text-align: center;
+        }
+        .gender-card:hover { border-color: var(--neon-green); transform: translateY(-5px); }
+        .gender-card i { font-size: 3rem; display: block; margin-bottom: 15px; }
+        
+        .division-info { font-size: 0.8rem; color: #888; display: block; margin-top: 5px; }
+        
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (max-width: 768px) {
+            .gender-grid { grid-template-columns: 1fr; }
+            .form-card { padding: 30px 15px; }
+        }
+    </style>
 </head>
 <body class="full-center">
-    <div class="form-card">
-        <h2 class="highlight" style="margin-bottom: 10px;">SELECIONE O PLANO</h2>
-        <p style="margin-bottom: 30px; font-size: 0.9rem; color: #666;">Clique na divisão desejada:</p>
+
+    <div class="container" style="display: flex; justify-content: center;">
         
-        <form id="treinoForm">
-            <div class="input-group">
-                <label style="background: #161b22; padding: 20px; border-radius: 10px; display: flex; align-items: center; gap: 15px; cursor: pointer;">
-                    <input type="radio" name="objetivo" value="ppl" checked style="width: 20px; height: 20px;">
-                    PPL (Push/Pull/Legs) - 6 Dias
-                </label>
+        <div id="step-1" class="form-card step-container step-active">
+            <span style="color: var(--neon-green); font-weight: bold; letter-spacing: 2px;">PASSO 01</span>
+            <h1 style="font-size: 2rem; margin: 10px 0;">QUAL SEU <span class="highlight">PERFIL?</span></h1>
+            <p style="color: #888;">Personalizamos a biomecânica conforme sua fisiologia.</p>
+            
+            <div class="gender-grid">
+                <div class="gender-card" onclick="nextStep('masculino')" style="border-bottom: 5px solid #00ff88;">
+                    <span style="font-size: 40px;">♂️</span>
+                    <h3 style="margin-top:10px;">MASCULINO</h3>
+                    <p style="font-size: 0.7rem; color: #666; margin-top: 10px;">Foco: Hipertrofia e Densidade</p>
+                </div>
+                <div class="gender-card" onclick="nextStep('feminino')" style="border-bottom: 5px solid #ff007f;">
+                    <span style="font-size: 40px;">♀️</span>
+                    <h3 style="margin-top:10px;">FEMININO</h3>
+                    <p style="font-size: 0.7rem; color: #666; margin-top: 10px;">Foco: Glúteos e Estética Wellness</p>
+                </div>
             </div>
-            <div class="input-group">
-                <label style="background: #161b22; padding: 20px; border-radius: 10px; display: flex; align-items: center; gap: 15px; cursor: pointer;">
-                    <input type="radio" name="objetivo" value="ppl-up" style="width: 20px; height: 20px;">
-                    PPL + UPPER (Híbrido) - 5 Dias
+        </div>
+
+        <div id="step-male" class="form-card step-container">
+            <button onclick="prevStep()" style="background: none; border: none; color: #888; cursor: pointer; float: left;">← Voltar</button>
+            <span style="color: var(--neon-green); font-weight: bold; letter-spacing: 2px;">MASCULINO</span>
+            <h2 style="margin: 20px 0;">ESCOLHA SEU <span class="highlight">PROTOCOLO</span></h2>
+            
+            <form action="#" id="form-male">
+                <label class="radio-option">
+                    <input type="radio" name="divisao" value="ppl" checked>
+                    <strong>PPL - Push Pull Legs (6 Dias)</strong>
+                    <span class="division-info">Foco em volume total e hipertrofia máxima semanal.</span>
                 </label>
-            </div>
-            <div class="input-group">
-                <label style="background: #161b22; padding: 20px; border-radius: 10px; display: flex; align-items: center; gap: 15px; cursor: pointer;">
-                    <input type="radio" name="objetivo" value="abcd" style="width: 20px; height: 20px;">
-                    ABCD (Foco Definição) - 4 Dias
+                <label class="radio-option">
+                    <input type="radio" name="divisao" value="ppl-ul">
+                    <strong>PPL + UPPER LOWER (5 Dias)</strong>
+                    <span class="division-info">Híbrido ideal para força e estética de elite.</span>
                 </label>
-            </div>
-            <button type="submit" class="btn-primary" style="margin-top: 20px;">GERAR MINHA FICHA</button>
-        </form>
+                <label class="radio-option">
+                    <input type="radio" name="divisao" value="abcd">
+                    <strong>ABCD - Foco Definição (4 Dias)</strong>
+                    <span class="division-info">Maior tempo de recuperação para queima de gordura.</span>
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="divisao" value="up2x">
+                    <strong>UPPER 2X (4 Dias)</strong>
+                    <span class="division-info">Foco total na largura de ombros e expansão de dorsais.</span>
+                </label>
+                <button type="submit" class="btn-primary" style="margin-top: 20px; width: 100%;">GERAR PLANILHA COMPLETA</button>
+            </form>
+        </div>
+
+        <div id="step-female" class="form-card step-container">
+            <button onclick="prevStep()" style="background: none; border: none; color: #888; cursor: pointer; float: left;">← Voltar</button>
+            <span style="color: #ff007f; font-weight: bold; letter-spacing: 2px;">FEMININO</span>
+            <h2 style="margin: 20px 0;">ESCOLHA SEU <span class="highlight">OBJETIVO</span></h2>
+            
+            <form action="#" id="form-female">
+                <label class="radio-option" style="border-left: 4px solid #ff007f;">
+                    <input type="radio" name="divisao" value="fem-abcde" checked>
+                    <strong>PROTOCOL SOPHIA BIANCO (5 Dias)</strong>
+                    <span class="division-info">Treino de elite: Glúteo 2x, Quadríceps e Deltoides.</span>
+                </label>
+                <label class="radio-option" style="border-left: 4px solid #ff007f;">
+                    <input type="radio" name="divisao" value="fem-abc">
+                    <strong>FOCO EM INFERIORES (4 Dias)</strong>
+                    <span class="division-info">Prioridade em Glúteo Médio, Posterior e Perna completa.</span>
+                </label>
+                <label class="radio-option" style="border-left: 4px solid #ff007f;">
+                    <input type="radio" name="divisao" value="fem-ab">
+                    <strong>TONIFICAÇÃO ACELERADA (3 Dias)</strong>
+                    <span class="division-info">Treino metabólico para perda de medidas e definição.</span>
+                </label>
+                <button type="submit" class="btn-primary" style="background: #ff007f; margin-top: 20px; width: 100%;">LIBERAR ACESSO PRO</button>
+            </form>
+        </div>
+
     </div>
-    <script src="js/script.js"></script>
+
+    <script>
+        function nextStep(gender) {
+            document.getElementById('step-1').classList.remove('step-active');
+            if (gender === 'masculino') {
+                document.getElementById('step-male').classList.add('step-active');
+            } else {
+                document.getElementById('step-female').classList.add('step-active');
+            }
+        }
+
+        function prevStep() {
+            document.querySelectorAll('.step-container').forEach(step => step.classList.remove('step-active'));
+            document.getElementById('step-1').classList.add('step-active');
+        }
+
+        // Lógica de Redirecionamento unificada
+        const handleForm = (e) => {
+            e.preventDefault();
+            const divisao = e.target.querySelector('input[name="divisao"]:checked').value;
+            const rotas = {
+                'ppl': 'treino-ppl.html',
+                'ppl-ul': 'treino-ppl-ul.html',
+                'abcd': 'treino-abcd.html',
+                'up2x': 'treino-up2x.html',
+                'fem-ab': 'treino-femininoAB.html',
+                'fem-abc': 'treino-femininoABC.html',
+                'fem-abcde': 'treino-femininoABCDE.html'
+            };
+            window.location.href = rotas[divisao];
+        };
+
+        document.getElementById('form-male').addEventListener('submit', handleForm);
+        document.getElementById('form-female').addEventListener('submit', handleForm);
+    </script>
 </body>
 </html>
