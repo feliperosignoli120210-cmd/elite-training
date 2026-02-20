@@ -2,38 +2,36 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Configurar Protocolo | Elite Training</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha seu Treino</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div class="full-center">
-        <div class="form-card">
-            <h1 class="highlight" style="font-weight: 900;">CONSULTORIA ESPORTIVA</h1>
-            <p style="color: #666; margin-bottom: 40px;">Sistema Avançado de Periodização e Performance</p>
-            
-            <form id="treinoForm">
-                <div class="input-group">
-                    <label>◎ OBJETIVO PRINCIPAL</label>
-                    <label class="radio-option">
-                        <input type="radio" name="objetivo" value="ppl" checked>
-                        <strong>PPL (Push/Pull/Legs) - 6 Dias</strong>
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="objetivo" value="ppl-up">
-                        <strong>PPL + UPPER - 5 Dias</strong>
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="objetivo" value="abcd">
-                        <strong>ABCD - Emagrecimento / Volume</strong>
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="objetivo" value="up2x">
-                        <strong>UPPER / LOWER 2X - 4 Dias</strong>
-                    </label>
-                </div>
-                <button type="submit" class="btn-primary" style="width: 100%;">GERAR FICHA TÉCNICA PRO</button>
-            </form>
-        </div>
+<body class="full-center">
+    <div class="form-card">
+        <h2 class="highlight" style="margin-bottom: 10px;">SELECIONE O PLANO</h2>
+        <p style="margin-bottom: 30px; font-size: 0.9rem; color: #666;">Clique na divisão desejada:</p>
+        
+        <form id="treinoForm">
+            <div class="input-group">
+                <label style="background: #161b22; padding: 20px; border-radius: 10px; display: flex; align-items: center; gap: 15px; cursor: pointer;">
+                    <input type="radio" name="objetivo" value="ppl" checked style="width: 20px; height: 20px;">
+                    PPL (Push/Pull/Legs) - 6 Dias
+                </label>
+            </div>
+            <div class="input-group">
+                <label style="background: #161b22; padding: 20px; border-radius: 10px; display: flex; align-items: center; gap: 15px; cursor: pointer;">
+                    <input type="radio" name="objetivo" value="ppl-up" style="width: 20px; height: 20px;">
+                    PPL + UPPER (Híbrido) - 5 Dias
+                </label>
+            </div>
+            <div class="input-group">
+                <label style="background: #161b22; padding: 20px; border-radius: 10px; display: flex; align-items: center; gap: 15px; cursor: pointer;">
+                    <input type="radio" name="objetivo" value="abcd" style="width: 20px; height: 20px;">
+                    ABCD (Foco Definição) - 4 Dias
+                </label>
+            </div>
+            <button type="submit" class="btn-primary" style="margin-top: 20px;">GERAR MINHA FICHA</button>
+        </form>
     </div>
     <script src="js/script.js"></script>
 </body>
