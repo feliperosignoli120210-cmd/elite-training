@@ -9,61 +9,74 @@
 <body>
     <nav class="navbar">
         <div class="logo">💪 ELITE TRAINING</div>
-        <a href="#login-section" class="btn-primary" style="padding: 10px 25px;">ENTRAR</a>
+        <div class="nav-links">
+            <a href="consultoria.html" class="btn-primary" style="padding: 10px 25px; font-size: 0.8rem; width: auto;">ENTRAR NO SISTEMA</a>
+        </div>
     </nav>
 
     <header class="hero">
         <div class="container">
-            <span style="border: 1px solid var(--neon-green); color: var(--neon-green); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">SISTEMA DE ALTA PERFORMANCE</span>
+            <span style="border: 1px solid var(--neon-green); color: var(--neon-green); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; letter-spacing: 1px;">SISTEMA DE ALTA PERFORMANCE</span>
             <h1 style="margin-top: 30px;">TRANSFORME SEU <br> <span class="highlight">SHAPE COM CIÊNCIA</span></h1>
-            <p>Protocolos avançados de 6 a 8 exercícios. Periodização profissional para hipertrofia e definição máxima. Acesse agora sua consultoria de elite diretamente no celular ou computador.</p>
+            <p>Acesse protocolos profissionais de 6 a 8 exercícios. Periodização avançada para hipertrofia e definição máxima, ajustada para sua fisiologia e objetivos reais.</p>
             
-            <div class="hero-btns">
-                <a href="#login-section" class="btn-primary">COMEÇAR AGORA</a>
-                <a href="#metodologia" class="btn-secondary" style="margin-left: 10px;">SABER MAIS</a>
+            <div class="hero-btns" style="margin-top: 40px;">
+                <a href="consultoria.html" class="btn-primary" style="margin-bottom: 10px;">COMEÇAR MINHA CONSULTORIA</a>
+                <a href="#metodologia" class="btn-secondary" style="margin-left: 10px;">CONHECER O MÉTODO</a>
             </div>
             
             <div class="stats">
-                <div><strong>5K+</strong><p>ATLETAS</p></div>
-                <div><strong>95%</strong><p>RESULTADOS</p></div>
-                <div><strong>10+</strong><p>ANOS</p></div>
+                <div><strong>5K+</strong><p>ATLETAS ATIVOS</p></div>
+                <div><strong>95%</strong><p>RESULTADOS REAIS</p></div>
+                <div><strong>10+</strong><p>ANOS DE EXPERIÊNCIA</p></div>
             </div>
         </div>
     </header>
 
-    <section id="metodologia" class="methodology container" style="padding: 100px 0; text-align: center;">
-        <h2 style="font-size: 2.5rem; margin-bottom: 50px;">NOSSO MÉTODO</h2>
-        <div class="grid-metodologia">
-            <div class="card-metodologia">
-                <h3>DIVISÕES TÉCNICAS</h3>
-                <p>Sistemas PPL, Upper/Lower e ABCD ajustados para o seu nível.</p>
+    <section id="metodologia" class="container" style="padding: 100px 0; text-align: center;">
+        <h2 style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 20px;">NOSSO <span class="highlight">MÉTODO</span></h2>
+        <p style="color: #888; max-width: 700px; margin: 0 auto 50px;">Treinar pesado não é o suficiente. Você precisa treinar com inteligência.</p>
+        
+        <div class="grid-metodologia" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div class="card-metodologia" style="background: var(--card-bg); padding: 40px; border-radius: 20px; border: 1px solid var(--border); text-align: left;">
+                <h3 style="color: var(--neon-green); margin-bottom: 15px;">BIOMECÂNICA APLICADA</h3>
+                <p style="font-size: 0.9rem; color: #ccc;">Exercícios selecionados para máxima ativação muscular, minimizando riscos de lesão e maximizando o estímulo.</p>
             </div>
-            <div class="card-metodologia">
-                <h3>PROGRESSÃO RPE</h3>
-                <p>Controle de intensidade real para evitar estagnação.</p>
+            <div class="card-metodologia" style="background: var(--card-bg); padding: 40px; border-radius: 20px; border: 1px solid var(--border); text-align: left;">
+                <h3 style="color: var(--neon-green); margin-bottom: 15px;">VOLUME OTIMIZADO</h3>
+                <p style="font-size: 0.9rem; color: #ccc;">Protocolos de 6 a 8 exercícios por dia, garantindo a densidade necessária para uma estética de palco.</p>
             </div>
-            <div class="card-metodologia">
-                <h3>6 A 8 EXERCÍCIOS</h3>
-                <p>Volume de treino otimizado para o máximo de densidade muscular.</p>
+            <div class="card-metodologia" style="background: var(--card-bg); padding: 40px; border-radius: 20px; border: 1px solid var(--border); text-align: left;">
+                <h3 style="color: var(--neon-green); margin-bottom: 15px;">DIVISÕES ESTRATÉGICAS</h3>
+                <p style="font-size: 0.9rem; color: #ccc;">Planos específicos para Masculino (Foco em V-Taper) e Feminino (Foco em Glúteos e Wellness).</p>
             </div>
         </div>
     </section>
 
-    <section id="login-section" class="full-center" style="background: #080a0c;">
-        <div class="form-card">
-            <h2>LOGIN DO ATLETA</h2>
+    <section id="login-section" class="full-center" style="background: linear-gradient(180deg, #050708 0%, #0a1f16 100%);">
+        <div class="form-card" style="max-width: 600px; padding: 60px 40px;">
+            <h2 style="margin-bottom: 10px;">ACESSO DO <span class="highlight">ATLETA</span></h2>
+            <p style="color: #888; margin-bottom: 40px;">Entre para visualizar suas planilhas personalizadas.</p>
+            
             <form action="consultoria.html">
                 <div class="input-group">
-                    <label>E-MAIL</label>
-                    <input type="email" placeholder="seu@email.com" required>
+                    <label>E-MAIL DE ACESSO</label>
+                    <input type="email" placeholder="exemplo@gmail.com" required style="background: #000; border: 1px solid #333; padding: 18px;">
                 </div>
                 <div class="input-group">
-                    <label>SENHA</label>
-                    <input type="password" placeholder="Sua senha" required>
+                    <label>SENHA DE SEGURANÇA</label>
+                    <input type="password" placeholder="Sua senha secreta" required style="background: #000; border: 1px solid #333; padding: 18px;">
                 </div>
-                <button type="submit" class="btn-primary" style="width: 100%;">ACESSAR TREINOS</button>
+                <button type="submit" class="btn-primary" style="width: 100%; padding: 20px; font-size: 1.1rem; margin-top: 20px;">ACESSAR PROTOCOLOS DE ELITE</button>
+                <a href="cadastro.html" style="display: block; margin-top: 25px; color: #666; text-decoration: none; font-size: 0.9rem;">Ainda não é um membro? <strong>Faça seu cadastro aqui.</strong></a>
             </form>
         </div>
     </section>
+
+    <footer style="padding: 50px 20px; text-align: center; border-top: 1px solid var(--border);">
+        <p style="color: #444; font-size: 0.8rem;">© 2026 ELITE TRAINING - CONSULTORIA ESPORTIVA PROFISSIONAL</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
