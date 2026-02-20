@@ -65,3 +65,30 @@ input { width: 100%; padding: 18px; background: #050708; border: 1px solid var(-
     .form-card { padding: 30px 20px; }
     .navbar { padding: 15px 20px; }
 }
+
+/* Cores e Elementos para o Perfil Feminino */
+.highlight-fem { 
+    color: #ff007f !important; 
+}
+
+.btn-feminino {
+    background: #ff007f !important;
+    color: white !important;
+    border: none;
+}
+
+/* Garante que as tabelas de treino feminino também tenham o scroll lateral no celular */
+.dia-bloco-fem {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    border-top: 4px solid #ff007f; /* Borda Rosa */
+    overflow-x: auto;
+}
+
+/* Ajuste de escala para o título não quebrar no celular */
+h1, h2 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
